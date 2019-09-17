@@ -2,7 +2,10 @@ FROM ubuntu:18.04
 
 MAINTAINER Rohit
 
-RUN apt-get update \
+RUN apt-get update\
     && apt-get install python -y
 
-CMD ["python"]
+COPY num.py ./num.py
+
+CMD ["python","./num.py"]
+
